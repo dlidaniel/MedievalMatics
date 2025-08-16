@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvkmlxy52ngxv"]
+
+[ext_resource type="PackedScene" uid="uid://djcmae0oq8b51" path="res://scenes/world_copy.tscn" id="1_pwwdk"]
+[ext_resource type="PackedScene" uid="uid://pqp5qaw561fr" path="res://scenes/coin.tscn" id="2_53cee"]
+
+[node name="level3" instance=ExtResource("1_pwwdk")]
+
+[node name="TileMap" parent="." index="1"]
+layer_0/tile_data = PackedInt32Array(458745, 393216, 2, 458746, 393216, 2, 458747, 393216, 2, 458748, 393216, 2, 393212, 393216, 2, 327676, 393216, 2, 327675, 393216, 2, 327674, 393216, 2, 327673, 393216, 2, 393209, 393216, 2, 393210, 393216, 2, 393211, 393216, 2, 196606, 393216, 2, 131074, 393216, 2, -1, 393216, 2, -65536, 393216, 2, -65535, 393216, 2, 327683, 393216, 2, 327688, 393216, 2, 262153, 393216, 2, 196618, 393216, 2, 10, 327680, 2)
+
+[node name="Coin" parent="." index="5" instance=ExtResource("2_53cee")]
+position = Vector2(-57, 55)
+
+[node name="Coin2" parent="." index="6" instance=ExtResource("2_53cee")]
+position = Vector2(-25, 27)
+
+[node name="Coin3" parent="." index="7" instance=ExtResource("2_53cee")]
+position = Vector2(53, 73)
+
+[node name="Coin4" parent="." index="8" instance=ExtResource("2_53cee")]
+position = Vector2(148, 55)
+
+[node name="Coin5" parent="." index="9" instance=ExtResource("2_53cee")]
+position = Vector2(163, 38)
+
+[node name="Coin6" parent="." index="10" instance=ExtResource("2_53cee")]
+position = Vector2(40, 19)
+
+[node name="Label" parent="CanvasLayer2" index="0"]
+text = "Equation: 12x+2 = 72"

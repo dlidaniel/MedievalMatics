@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfy5acf7pytw0"]
+
+[ext_resource type="FontFile" uid="uid://c53kogtyjwsss" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_7bcj0"]
+[ext_resource type="Script" path="res://victory_screen.gd" id="1_pvtrx"]
+[ext_resource type="FontFile" uid="uid://dbjl1e6kdxpl6" path="res://assets/fonts/PixelOperator8.ttf" id="2_r4ka4"]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pvtrx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7bcj0")
+text = "You Win!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(104, 16)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r4ka4")
+theme_override_font_sizes/font_size = 10
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
